@@ -31,7 +31,7 @@ axios(url)
       // i think this is an array of objects which is why i console.log(price) works inside the scope
       // possibly have to figure out how to print the value of an attribute of an objects in the array of objects..?
       searchresults.each(function () {
-          const hotel = $(this).find('h3[data-stid="content-hotel-title"]').text();
+          const hotel = $(this).find('h3[data-stid="content-hotel-title"]').not('[aria-hidden="false"]').text();
           const price = $(this).find('span[data-stid="content-hotel-lead-price"]').text();
 
           prices.push({
