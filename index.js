@@ -47,3 +47,6 @@ axios(url)
   })
   .catch(console.error);
 
+// grab prices from other sites
+// create table showing prices and from which site
+// add functionality for choosing dates of stays
