@@ -38,12 +38,16 @@ axios(url)
             hotel,
             price
         });
-
-        console.log(hotel + ":" + price);
       });
 
-      // figure out how to print off each attribute of this array of objects...
-      //console.log(prices[price]);
+      // different way to run a function for each element in prices array
+      // for each key and value (object.entries) in the object...
+      // print them to the console
+      prices.forEach(function (entry) {
+        for (let [hotel, price] of Object.entries(entry)) {
+          console.log(`${hotel} : ${price}`);
+        }
+      });
   })
   .catch(console.error);
 
